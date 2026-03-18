@@ -10,6 +10,7 @@ Contact: [shyu6370@gmail.com](mailto:shyu6370@gmail.com)
 - **"왜?"라는 질문을 던지며 근본적인 원인을 찾습니다.** 단순히 기능 구현에 그치지 않고, 쿼리 실행 계획과 로그를 집요하게 분석하여 시스템의 진짜 병목 지점을 찾아내고 개선하는 과정을 즐깁니다.
 - **데이터베이스 엔지니어링과 분산 시스템에 관심이 많습니다.** 대용량 트래픽 환경에서의 인덱스 튜닝, 캐시 최적화, 그리고 데이터 정합성을 보장하는 아키텍처 설계에 깊게 파고듭니다.
 - **주도적으로 인프라 환경을 개척합니다.** 클라우드 환경 운영에 머물지 않고, 비용 절감과 효율성을 위해 직접 로컬 VM 기반 K8s 클러스터를 구축하고 CI/CD를 고도화하는 등 백엔드와 인프라의 경계를 넓혀가며 성장 중입니다.
+- **AI 도구를 활용해 생산성을 극대화합니다.** 백엔드 개발에 주력하지만, 서비스의 전체 사이클을 이해하기 위해 Cursor와 Claude 등 AI 도구를 적극 활용하여 프론트엔드 화면까지 주도적으로 구현해 본 경험이 있습니다.
 
 ---
 
@@ -24,8 +25,8 @@ Contact: [shyu6370@gmail.com](mailto:shyu6370@gmail.com)
 ### Infra, Monitoring & DevOps
 <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white"> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"> <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white">
 
-### Tools & Testing
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"> <img src="https://img.shields.io/badge/JUnit%205-25A162?style=for-the-badge&logo=junit5&logoColor=white"> <img src="https://img.shields.io/badge/Mockito-000000?style=for-the-badge&logo=java&logoColor=white"> 
+### Frontend & Tools
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"> <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white"> <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white">
 
 ---
 
