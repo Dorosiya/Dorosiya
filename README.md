@@ -1,64 +1,134 @@
-# 안녕하세요. 백엔드 개발자 유성호입니다.
+# SHYU — 유성호
 
-> "기술적 호기심이 많고 동료와의 기술 토론과 지식 공유를 통해 팀에 기여하는 개발자를 지향합니다."
+### Backend Engineer
 
-Contact: [shyu6370@gmail.com](mailto:shyu6370@gmail.com)
+느린 지점을 수치로 찾고, 데이터 흐름과 운영 환경까지 함께 개선합니다.
+Java·Kotlin과 Spring을 중심으로 **성능, 데이터 정합성, 운영 안정성**을 고민합니다.
+
+[포트폴리오](https://shyu-portfolio.pages.dev) · [이력서](https://shyu-portfolio.pages.dev/resume.pdf) · [이메일](mailto:shyu6370@gmail.com)
 
 ---
 
 ## About Me
-- **"왜?"라는 질문을 던지며 근본적인 원인을 찾습니다.** 단순히 기능 구현에 그치지 않고, 쿼리 실행 계획과 로그를 집요하게 분석하여 시스템의 진짜 병목 지점을 찾아내고 개선하는 과정을 즐깁니다.
-- **데이터베이스 엔지니어링과 분산 시스템에 관심이 많습니다.** 대용량 트래픽 환경에서의 인덱스 튜닝, 캐시 최적화, 그리고 데이터 정합성을 보장하는 아키텍처 설계에 깊게 파고듭니다.
-- **주도적으로 인프라 환경을 개척합니다.** 클라우드 환경 운영에 머물지 않고, 비용 절감과 효율성을 위해 직접 로컬 VM 기반 K8s 클러스터를 구축하고 CI/CD를 고도화하는 등 백엔드와 인프라의 경계를 넓혀가며 성장 중입니다.
-- **새로운 도구로 생산성을 고민합니다.** 서비스의 전체 사이클을 이해하기 위해 Cursor와 Claude 등 AI 도구를 적극 활용하여 프론트엔드 화면까지 주도적으로 구현해 본 경험이 있습니다.
+
+- **“왜?”를 먼저 묻습니다.** 기능 구현에 그치지 않고 실행 계획과 로그를 살펴 실제 병목과 실패 원인을 찾습니다.
+- **데이터가 흐르는 전체 과정을 봅니다.** 저장·검색·캐시·이벤트 전달 사이의 정합성과 책임을 함께 설계합니다.
+- **운영까지 이어지는 개발을 지향합니다.** 배포, 관측, 장애 경계를 직접 확인하며 개선 결과를 검증합니다.
+- **근거를 공유하며 협업합니다.** 복잡한 문제를 작은 계약과 리뷰 가능한 변경으로 나누고 선택의 이유를 기록합니다.
+
+---
+
+## Engineering Highlights
+
+| 부하 검증 | 데이터 정합성 | 운영 환경 |
+| --- | --- | --- |
+| k6 100 VU·5분<br>**총 17,356건 · RPS 57.7 req/s · 오류율 0%** | Outbox·Debezium CDC로<br>이벤트 전달 흐름 표준화 | 로컬 VM 기반<br>**3-Node Kubernetes** 구축 |
+
+---
+
+## Selected Work
+
+### 01. PawBridge
+
+> 공공데이터 기반 유기동물 보호·입양 플랫폼
+
+- Outbox와 Debezium CDC를 적용해 트랜잭션 이후 이벤트 전달 흐름을 정리했습니다.
+- k6 100 VU·5분 동안 **총 17,356건의 요청**을 처리했고, **RPS 57.7 req/s·오류율 0%**를 확인했습니다.
+- Kubernetes와 Prometheus·Grafana·Zipkin으로 배포와 관측 환경을 구성했습니다.
+
+`Java` `Spring Boot` `MySQL` `Redis` `Elasticsearch` `Kafka` `Kubernetes`
+
+[프로젝트 상세](https://shyu-portfolio.pages.dev/#project-pawbridge) · [운영 서비스](https://www.pawbridge.kr) · [GitHub](https://github.com/pawbridge/pawbridge-backend-k8s)
+
+### 02. Ops Console
+
+> ICT콤플렉스 기업 협업 실무 프로젝트 · 운영 업무 구조화
+
+- 운영 용어와 정책을 코드의 책임으로 옮기는 도메인 설계를 진행하고 있습니다.
+- Kotlin·Spring 기반에서 계층별 책임과 변경 경계를 분리합니다.
+- 계약과 구현 근거를 리뷰 가능한 단위로 정리하며 협업합니다.
+
+`Kotlin` `Spring Boot` `JPA` `DDD`
+
+[프로젝트 상세](https://shyu-portfolio.pages.dev/#project-ops-console)
+
+### 03. 샛별
+
+> AI 모의면접 서비스 · 응답 지연과 LLM 호출 흐름 개선
+
+- 면접 처리 흐름을 병렬화하고 배치 평가로 전환해 사용자 대기 시간을 줄였습니다.
+- 중복 문맥 처리 단계를 정리해 LLM 호출을 **21회에서 11회**로 줄였습니다.
+
+`Java` `Spring Boot` `Python` `FastAPI` `LLM`
+
+[프로젝트 상세](https://shyu-portfolio.pages.dev/#project-starlight)
 
 ---
 
 ## Tech Stack
 
 ### Backend
-<img src="https://img.shields.io/badge/Java%2017-007396?style=for-the-badge&logo=java&logoColor=white"> <img src="https://img.shields.io/badge/Spring%20Boot%203-6DB33F?style=for-the-badge&logo=springboot&logoColor=white"> <img src="https://img.shields.io/badge/Spring%20Data%20JPA-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white"> <img src="https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white"> <img src="https://img.shields.io/badge/QueryDSL-007396?style=for-the-badge&logo=java&logoColor=white"> 
 
-### Database & Search
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white"> <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"> <img src="https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white"> <img src="https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white"> <img src="https://img.shields.io/badge/Debezium-000000?style=for-the-badge&logo=apachekafka&logoColor=white">
+![Java 17](https://img.shields.io/badge/Java%2017-007396?style=flat-square&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring%20Data%20JPA-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring%20Cloud-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![QueryDSL](https://img.shields.io/badge/QueryDSL-4479A1?style=flat-square)
+![Spring Batch](https://img.shields.io/badge/Spring%20Batch-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Resilience4j](https://img.shields.io/badge/Resilience4j-5A67D8?style=flat-square)
 
-### Infra, Monitoring & DevOps
-<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"> <img src="https://img.shields.io/badge/Helm-0F1689?style=for-the-badge&logo=helm&logoColor=white"> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"> <img src="https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white"> <img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white">
+### Data & Messaging
 
-### Frontend & Tools
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> <img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white"> <img src="https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white"> <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white">
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![Debezium](https://img.shields.io/badge/Debezium-111827?style=flat-square)
+
+### Infra & Observability
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
+![Zipkin](https://img.shields.io/badge/Zipkin-111827?style=flat-square)
+
+### Testing & Supporting
+
+![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?style=flat-square&logo=junit5&logoColor=white)
+![Testcontainers](https://img.shields.io/badge/Testcontainers-2196F3?style=flat-square&logo=testcontainers&logoColor=white)
+![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=flat-square&logo=intellijidea&logoColor=white)
 
 ---
 
-## Core Competencies
-- **Performance Optimization**: 500만 건 데이터 환경에서 복합 인덱스 재설계로 조회 속도를 14초에서 60ms로 단축하고, Redis 캐싱을 적용해 최종 20ms까지 성능을 극대화한 경험이 있습니다.
-- **Infrastructure & CI/CD**: AWS EC2 분산 환경을 로컬 VM 3-Node Kubernetes 클러스터로 직접 마이그레이션하여 비용을 절감하고 서비스를 운영한 경험이 있습니다.
-- **System Resilience**: Circuit Breaker 및 Event-Driven 아키텍처를 적용해 단일 실패 지점(SPOF) 리스크를 줄이고 외부 장애 전파를 차단합니다.
+## GitHub Activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-summary-card-output/github_dark/0-profile-details.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-summary-card-output/github/0-profile-details.svg">
+  <img alt="SHYU GitHub activity summary" src="./profile-summary-card-output/github/0-profile-details.svg">
+</picture>
 
 ---
 
-## Key Projects
+## Working Principles
 
-### PawBridge (유기동물 보호 및 입양 플랫폼)
-*8개의 마이크로서비스로 구성된 K8s 환경 기반의 통합 플랫폼*
-- **MSA & Infra**: 로컬 VM 3-Node K8s 클러스터 구축, Helm 기반 선언적 배포 및 Cloudflare Tunnel 적용
-- **Data Sync**: Transactional Outbox 패턴과 Debezium CDC를 도입해 이중 쓰기 방지 및 비동기 데이터 동기화 파이프라인 구축
-- **Concurrency**: 주문 폭주 시나리오를 대비해 비관적 락(Pessimistic Lock)을 적용하여 재고 차감 경쟁 상태(Race Condition) 제어
+- 추측보다 실행 계획과 로그로 병목을 확인합니다.
+- 기능 구현에서 끝내지 않고 실패 경계와 운영 상태까지 살핍니다.
+- 복잡한 문제를 작은 계약과 검증 가능한 변경으로 나눕니다.
 
-### 샛별 (개발자 커리어 플랫폼)
-*AI 모의면접 기능 및 대용량 트래픽 성능 최적화에 집중한 플랫폼*
-- **AI Feature**: STT/TTS 및 Dual LLM(OpenAI/Gemini)을 활용한 실시간 음성 AI 모의면접 시스템 및 이력서(PDF/Word) 파싱 기능 구현
-- **Performance**: 500만 건 데이터 대상 다중 스칼라 서브쿼리 병목을 복합 인덱스로 해결(14초 ➔ 60ms)하고, Redis 적용으로 최종 20ms 달성
-- **Resilience**: Resilience4j Circuit Breaker를 도입해 외부 API 지연 시 연쇄 실패(Cascading Failure)를 차단하는 Dual LLM Fallback 아키텍처 구현
-- **Architecture**: 트랜잭션과 부가 기능(검열/알림)의 강결합을 Spring Event로 분리하고, `@TransactionalEventListener`로 데이터 가시성 확보
-
-### OTT-Moa (OTT 구독 공유 플랫폼)
-*실시간 통신 및 안전한 파티 매칭을 위한 중개 서비스*
-- **Real-time Chat**: 단일 서버 WebSocket의 한계를 극복하기 위해 Redis Pub/Sub을 도입하여 다중 서버(Scale-out) 환경의 채팅 아키텍처 구축
-- **Query Tuning**: 채팅방 목록 조회 시 발생하는 N+1 문제를 Fetch Join으로 해결하여 쿼리 발생 횟수 93% 감소 (28회 ➔ 2회)
-
----
-
-## GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Dorosiya&show_icons=true&theme=transparent&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Dorosiya&layout=compact&theme=transparent&hide_border=true)
+더 자세한 문제 해결 과정은 [포트폴리오](https://shyu-portfolio.pages.dev)에서 확인할 수 있습니다.
