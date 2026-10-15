@@ -5,7 +5,7 @@
 느린 지점을 수치로 찾고, 데이터 흐름과 운영 환경까지 함께 개선합니다.
 Java·Kotlin과 Spring을 중심으로 **성능, 데이터 정합성, 운영 안정성**을 고민합니다.
 
-[포트폴리오](https://shyu-portfolio.pages.dev) · [이력서](https://shyu-portfolio.pages.dev/resume.pdf) · [이메일](mailto:shyu6370@gmail.com)
+[포트폴리오](https://shyu-portfolio.pages.dev), [이메일](mailto:shyu6370@gmail.com)
 
 ---
 
